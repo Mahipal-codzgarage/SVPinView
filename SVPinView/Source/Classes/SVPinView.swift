@@ -289,7 +289,8 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
         textField.layer.sublayerTransform = CATransform3DMakeTranslation(-4, 0, 0)
         textField.isSecureTextEntry = false
         textField.textColor = self.textColor
-        textField.tintColor = textColor
+        //textField.tintColor = textColor
+        textField.tintColor = UIColor.clear
         textField.font = self.font
         if #available(iOS 12.0, *), indexPath.row == 0, isContentTypeOneTimeCode {
             textField.textContentType = .oneTimeCode
