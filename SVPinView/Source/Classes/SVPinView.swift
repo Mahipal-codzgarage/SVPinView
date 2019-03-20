@@ -87,7 +87,7 @@ public class SVPinView: UIView {
         flowLayout.scrollDirection = .vertical //weird!!!
         collectionView.isScrollEnabled = false
         
-        password = [String](repeating: "", count: pinLength)
+        //password = [String](repeating: "", count: pinLength)
         
         self.addSubview(view)
         view.frame = bounds
@@ -272,6 +272,7 @@ public class SVPinView: UIView {
 extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        password = [String](repeating: "", count: pinLength)
         return pinLength
     }
     
